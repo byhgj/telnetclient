@@ -1,0 +1,21 @@
+{
+  "name": "telnetclient",
+  "version": "0.0.1",
+  "description": "telnet client",
+  "main": "telnetclient.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/byhgj/telnetclient.git"
+  },
+  "keywords": [
+    "telnet",
+    "client"
+  ],
+  "author": "byhgj",
+  "license": "BSD",
+  "readmeFilename": "readme.md",
+  "gitHead": "0a130f500d8534dcc294bab1b446fb2d99f5006f"
+}
