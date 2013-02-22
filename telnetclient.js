@@ -64,6 +64,7 @@ function Client(HOST, PORT, options){
 		socket.on('close', function() {
 			process.stdin.destroy();
 			//console.log('Connection closed');
+			me.emit('end');
 		});
 	}
 	this.connect = function(){
@@ -140,8 +141,9 @@ function parse(socket){
 		if (arr.length != 0) {
 			var s = new Buffer(arr).toString();
 			util.print(s);
-			if (arr[arr.length-1] != 0x0a && typeof me.client != 'undefined'){
-				me.client.emit('input',me.socket,s);
+			//arr[arr.length-1] != 0x0a && 
+			if (typeof me.client != 'undefined'){
+				me.client.emit('data',me.socket,s);
 			}
 		}
 	}
